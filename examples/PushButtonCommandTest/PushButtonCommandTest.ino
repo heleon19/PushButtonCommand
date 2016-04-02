@@ -58,11 +58,14 @@ void loop()
       case PUSH_CMD_CLICK:
         Serial.println("Switch " + String(i + 1) + " -> CLICK");
         break;
-      case PUSH_CMD_LONGPUSH:
+      case PUSH_CMD_LONG_PUSH:
         Serial.println("Switch " + String(i + 1) + " -> LONG PUSH");
         break;
       case PUSH_CMD_DOUBLE_CLICK:
         Serial.println("Switch " + String(i + 1) + " -> DOUBLE CLICK");
+        break;
+      case PUSH_CMD_LONG_CLICK:
+        Serial.println("Switch " + String(i + 1) + " -> LONG CLICK");
         break;
     }
 
