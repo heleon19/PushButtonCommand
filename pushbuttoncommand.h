@@ -10,8 +10,9 @@
 
 #define PUSH_CMD_NONE           0
 #define PUSH_CMD_CLICK          1
-#define PUSH_CMD_LONGPUSH       2
+#define PUSH_CMD_LONG_PUSH      2
 #define PUSH_CMD_DOUBLE_CLICK   3
+#define PUSH_CMD_LONG_CLICK     4
 
 class PushButtonCommand
 {

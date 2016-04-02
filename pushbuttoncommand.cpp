@@ -59,7 +59,7 @@ uint8_t PushButtonCommand::loop(uint8_t index, boolean input)
             if(input && _counters[index]++ == _longpush)
             {
                 _sequences[index] = _STEP_WAIT_FOR_LONG_PUSH_END;
-                return PUSH_CMD_LONGPUSH;
+                return PUSH_CMD_LONG_PUSH;
             }
             else if(!input && _counters[index]++ == _debounce)
             {
@@ -72,12 +72,12 @@ uint8_t PushButtonCommand::loop(uint8_t index, boolean input)
         {
             if(input)
             {
-                return PUSH_CMD_LONGPUSH;
+                return PUSH_CMD_LONG_PUSH;
             }
             else if(_counters[index]++ == _debounce)
             {
                 _sequences[index] = _STEP_END;
-                return PUSH_CMD_NONE;
+                return PUSH_CMD_LONG_CLICK;
             }
             break;
         }
